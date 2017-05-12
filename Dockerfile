@@ -3,8 +3,7 @@ MAINTAINER mnagaku <mnagaku@gmail.com>
 
 ENV DOKUWIKI_VERSION 2017-02-19b
 
-RUN apk --no-cache add \
-    php7 php7-fpm php7-gd php7-session php7-xml nginx supervisor curl tar \
+RUN apk --no-cache add php7 php7-fpm php7-gd php7-session php7-xml php7-openssl php7-zlib nginx supervisor curl tar && \
     mkdir -p /run/nginx && \
     mkdir -p /var/www /var/dokuwiki-storage/data && \
     cd /var/www && \
